@@ -150,7 +150,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 - 🌐 Portfolio: [Live Site](#)
 - 💻 GitHub: [github.com/yourusername](https://github.com/sarvadevarammohan-commits)
-- 💼 LinkedIn: [linkedin.com/in/yourprofile](https://linkedin.com/in/pradyumnarammohan)
+- 💼 LinkedIn: [linkedin.com/in/yourprofile](https://linkedin.com/in/pradyumna-rammohan)
 
 ---
 
