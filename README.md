@@ -149,8 +149,8 @@ This project is open source and available under the [MIT License](LICENSE).
 **RAM** — BTech CSE (AI & Data Science) Student
 
 - 🌐 Portfolio: [Live Site](#)
-- 💻 GitHub: [github.com/yourusername](https://github.com/yourusername)
-- 💼 LinkedIn: [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)
+- 💻 GitHub: [github.com/yourusername](https://github.com/sarvadevarammohan-commits)
+- 💼 LinkedIn: [linkedin.com/in/yourprofile](https://linkedin.com/in/pradyumna-rammohan)
 
 ---
 
