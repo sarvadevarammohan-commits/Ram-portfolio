@@ -287,6 +287,7 @@ img { max-width: 100%; display: block; }
 .project-card {
   background: var(--bg-card); border: 1px solid var(--border-glass);
   border-radius: var(--radius-lg); overflow: hidden; transition: var(--transition);
+  position: relative;
 }
 .project-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-glow); border-color: rgba(79, 143, 255, 0.2); }
 .project-image { position: relative; height: 220px; overflow: hidden; }
@@ -503,4 +504,188 @@ img { max-width: 100%; display: block; }
   .section { padding: 60px 0; }
   .section-title { font-size: 1.5rem; margin-bottom: 40px; }
   .container { padding: 0 16px; }
+}
+
+/* ============================================
+   ENHANCED JAVASCRIPT-POWERED FEATURES
+   ============================================ */
+
+/* ---------- PRELOADER ---------- */
+.preloader {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: var(--bg-primary); z-index: 10000;
+  display: flex; align-items: center; justify-content: center;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+  /* FAILSAFE: auto-hide even if JS crashes */
+  animation: preloader-failsafe 0.6s ease 4s forwards;
+}
+@keyframes preloader-failsafe {
+  to { opacity: 0; visibility: hidden; pointer-events: none; }
+}
+.preloader.hidden { opacity: 0; visibility: hidden; pointer-events: none; animation: none; }
+.preloader-inner { text-align: center; }
+.preloader-logo {
+  font-family: var(--font-mono); font-size: 2rem; font-weight: 800;
+  background: var(--gradient-1); -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; background-clip: text;
+  margin-bottom: 24px; animation: pulse-glow 2s ease-in-out infinite;
+}
+@keyframes pulse-glow {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.3); }
+}
+.preloader-bar {
+  width: 200px; height: 3px; background: rgba(255, 255, 255, 0.08);
+  border-radius: 3px; overflow: hidden; margin: 0 auto 16px;
+}
+.preloader-progress {
+  height: 100%; width: 0; background: var(--gradient-1);
+  border-radius: 3px; transition: width 0.3s ease;
+}
+.preloader-text {
+  font-size: 0.8rem; color: var(--text-muted); letter-spacing: 2px;
+  text-transform: uppercase; animation: fade-pulse 2s ease-in-out infinite;
+}
+@keyframes fade-pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+/* ---------- CUSTOM CURSOR ---------- */
+.cursor-dot {
+  position: fixed; top: 0; left: 0; width: 8px; height: 8px;
+  background: var(--accent-blue); border-radius: 50%;
+  pointer-events: none; z-index: 9999;
+  transition: transform 0.1s ease, opacity 0.3s ease;
+  mix-blend-mode: difference;
+}
+.cursor-outline {
+  position: fixed; top: 0; left: 0; width: 36px; height: 36px;
+  border: 2px solid rgba(79, 143, 255, 0.4); border-radius: 50%;
+  pointer-events: none; z-index: 9998;
+  transition: transform 0.15s ease, width 0.3s ease, height 0.3s ease, border-color 0.3s ease;
+}
+.cursor-dot.hovering { transform: scale(2.5); background: var(--accent-purple); }
+.cursor-outline.hovering {
+  width: 56px; height: 56px; border-color: rgba(139, 92, 246, 0.5);
+}
+.cursor-outline.clicking { transform: scale(0.8); }
+
+/* Hide custom cursor on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .cursor-dot, .cursor-outline { display: none !important; }
+}
+
+/* ---------- 3D TILT / CARD PERSPECTIVE ---------- */
+[data-tilt] {
+  transform-style: preserve-3d;
+  transition: transform 0.4s cubic-bezier(0.03, 0.98, 0.52, 0.99);
+  will-change: transform;
+}
+[data-tilt] .project-content,
+[data-tilt] .achievement-icon,
+[data-tilt] h3 {
+  transform: translateZ(30px);
+}
+
+/* ---------- PROJECT LIVE LINK BUTTON ---------- */
+.project-live-link {
+  display: inline-flex; align-items: center; gap: 8px;
+  margin-top: 16px; padding: 10px 22px;
+  background: var(--gradient-1); color: #fff;
+  border-radius: var(--radius-sm); font-size: 0.85rem; font-weight: 600;
+  transition: var(--transition); position: relative; overflow: hidden;
+  box-shadow: 0 4px 15px rgba(79, 143, 255, 0.25);
+}
+.project-live-link::before {
+  content: ''; position: absolute; top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.6s ease;
+}
+.project-live-link:hover::before { left: 100%; }
+.project-live-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(79, 143, 255, 0.4);
+}
+
+/* ---------- FLOATING RIBBON ---------- */
+.floating-ribbon {
+  position: fixed; bottom: 100px; right: -220px; z-index: 998;
+  display: flex; align-items: center; gap: 10px;
+  padding: 14px 24px; border-radius: 50px 0 0 50px;
+  background: linear-gradient(135deg, #4f8fff, #8b5cf6);
+  color: #fff; font-size: 0.85rem; font-weight: 600;
+  box-shadow: 0 8px 32px rgba(79, 143, 255, 0.35);
+  transition: right 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+}
+.floating-ribbon.visible { right: 0; }
+.floating-ribbon:hover {
+  right: 0; padding-right: 32px;
+  box-shadow: 0 12px 40px rgba(139, 92, 246, 0.4);
+}
+.floating-ribbon i { font-size: 1.1rem; animation: float 3s ease-in-out infinite; }
+
+/* ---------- MAGNETIC BUTTON EFFECT ---------- */
+.magnetic {
+  transition: transform 0.3s cubic-bezier(0.03, 0.98, 0.52, 0.99);
+}
+
+/* ---------- PARALLAX SECTIONS ---------- */
+.section { transition: background-position 0.1s ease; }
+
+/* ---------- STAGGER REVEAL ANIMATION ---------- */
+.reveal.stagger-1 { transition-delay: 0.1s; }
+.reveal.stagger-2 { transition-delay: 0.2s; }
+.reveal.stagger-3 { transition-delay: 0.3s; }
+.reveal.stagger-4 { transition-delay: 0.4s; }
+.reveal.stagger-5 { transition-delay: 0.5s; }
+
+/* ---------- GLITCH TEXT EFFECT ---------- */
+.glitch-text {
+  position: relative;
+  animation: glitch-skew 4s infinite linear alternate-reverse;
+}
+@keyframes glitch-skew {
+  0%, 100% { transform: skew(0deg); }
+  20% { transform: skew(-0.5deg); }
+  40% { transform: skew(0.5deg); }
+  60% { transform: skew(-0.3deg); }
+  80% { transform: skew(0.3deg); }
+}
+
+/* ---------- RIPPLE EFFECT ON BUTTONS ---------- */
+.btn .ripple {
+  position: absolute; border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(0); animation: ripple-effect 0.6s linear;
+  pointer-events: none;
+}
+@keyframes ripple-effect {
+  to { transform: scale(4); opacity: 0; }
+}
+
+/* ---------- ENHANCED HOVER GLOW ---------- */
+.project-card::after {
+  content: ''; position: absolute; inset: -1px;
+  border-radius: var(--radius-lg); opacity: 0;
+  background: linear-gradient(135deg, rgba(79, 143, 255, 0.15), rgba(139, 92, 246, 0.15));
+  transition: opacity 0.4s ease; z-index: -1;
+}
+.project-card:hover::after { opacity: 1; }
+
+/* ---------- SCROLL PROGRESS BAR ---------- */
+.scroll-progress {
+  position: fixed; top: 0; left: 0; height: 3px;
+  background: var(--gradient-1); z-index: 1001;
+  transition: width 0.1s linear; border-radius: 0 2px 2px 0;
+}
+
+/* ---------- RESPONSIVE ADJUSTMENTS FOR NEW FEATURES ---------- */
+@media (max-width: 768px) {
+  .floating-ribbon { bottom: 80px; font-size: 0.8rem; padding: 10px 18px; }
+  .floating-ribbon span { display: none; }
+  .floating-ribbon.visible { right: 0; }
+  .cursor-dot, .cursor-outline { display: none; }
 }

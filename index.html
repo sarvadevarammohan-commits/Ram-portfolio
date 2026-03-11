@@ -14,6 +14,19 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- PRELOADER -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-logo">&lt;RAM /&gt;</div>
+      <div class="preloader-bar"><div class="preloader-progress" id="preloaderProgress"></div></div>
+      <div class="preloader-text">Loading experience...</div>
+    </div>
+  </div>
+
+  <!-- CUSTOM CURSOR -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-outline" id="cursorOutline"></div>
+
   <canvas id="particleCanvas"></canvas>
 
   <!-- NAV -->
@@ -43,10 +56,10 @@
       <p class="hero-tagline reveal"><span class="typewriter" id="typewriter"></span><span class="cursor-blink">|</span></p>
       <p class="hero-description reveal">I am a second-year BTech student specializing in Artificial Intelligence and Data Science. I am passionate about building intelligent systems, solving real-world problems using technology, and continuously improving my programming and analytical skills.</p>
       <div class="hero-buttons reveal">
-        <a href="#projects" class="btn btn-primary"><i class="fas fa-rocket"></i> View Projects</a>
-        <a href="#" class="btn btn-secondary"><i class="fas fa-download"></i> Download Resume</a>
-        <a href="https://github.com/sarvadevarammohan-commits" target="_blank" class="btn btn-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/pradyumna-rammohan" target="_blank" class="btn btn-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#projects" class="btn btn-primary magnetic"><i class="fas fa-rocket"></i> View Projects</a>
+        <a href="#" class="btn btn-secondary magnetic"><i class="fas fa-download"></i> Download Resume</a>
+        <a href="https://github.com/sarvadevarammohan-commits" target="_blank" class="btn btn-icon magnetic" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/pradyumna-rammohan-16475b32a/" target="_blank" class="btn btn-icon magnetic" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
       </div>
       <div class="hero-stats reveal">
         <div class="stat-item"><span class="stat-number" data-count="2">0</span>+<span class="stat-label">Projects</span></div>
@@ -135,22 +148,25 @@
     <div class="container">
       <h2 class="section-title reveal"><span class="title-number">03.</span> Featured Projects</h2>
       <div class="projects-grid">
-        <div class="project-card reveal">
+        <div class="project-card reveal" data-tilt data-link="https://studyflow-reserve.lovable.app" style="cursor:pointer;" onclick="window.open('https://studyflow-reserve.lovable.app','_blank')">
           <div class="project-image">
-            <div class="project-image-placeholder"><i class="fas fa-video"></i><span>AI Vision System</span></div>
-            <div class="project-overlay"><div class="overlay-links"><a href="#" class="overlay-btn"><i class="fab fa-github"></i></a><a href="#" class="overlay-btn"><i class="fas fa-external-link-alt"></i></a></div></div>
+            <a href="https://studyflow-reserve.lovable.app" target="_blank" style="display:block;width:100%;height:100%;">
+              <div class="project-image-placeholder"><i class="fas fa-book-reader"></i><span>Smart Library System</span></div>
+            </a>
+            <div class="project-overlay"><div class="overlay-links"><a href="https://github.com/sarvadevarammohan-commits" target="_blank" class="overlay-btn" title="GitHub" onclick="event.stopPropagation()"><i class="fab fa-github"></i></a><a href="https://studyflow-reserve.lovable.app" target="_blank" class="overlay-btn" title="Live Demo" onclick="event.stopPropagation()"><i class="fas fa-external-link-alt"></i></a></div></div>
           </div>
           <div class="project-content">
-            <div class="project-featured">Featured Project</div>
-            <h3 class="project-title">AI Library Seat Monitoring System</h3>
-            <p class="project-description">An intelligent library seat monitoring system that started as a digital seat booking platform and is being enhanced with AI and Computer Vision. The system analyzes real-time CCTV footage to automatically detect seat occupancy, eliminating manual booking updates and providing live seat availability on a digital layout.</p>
-            <div class="project-tech"><span>Python</span><span>OpenCV</span><span>HTML/CSS</span><span>JavaScript</span><span>AI / CV</span></div>
+            <div class="project-featured">Featured Project · <span style="color:#06d6a0;">● LIVE</span></div>
+            <h3 class="project-title">Smart Library Seat Reservation System</h3>
+            <p class="project-description">A real-time library seat booking system with QR check-in, student & admin dashboards, usage analytics, and AI-powered insights. Book seats, scan QR codes to check in, and track occupancy — all in one platform.</p>
+            <div class="project-tech"><span>Flutter</span><span>Firebase</span><span>Firestore</span><span>QR Check-in</span><span>AI Analytics</span></div>
+            <a href="https://studyflow-reserve.lovable.app" target="_blank" class="project-live-link magnetic" onclick="event.stopPropagation()"><i class="fas fa-external-link-alt"></i> Open Live Website</a>
           </div>
         </div>
-        <div class="project-card reveal">
+        <div class="project-card reveal" data-tilt>
           <div class="project-image">
             <div class="project-image-placeholder"><i class="fas fa-laptop-code"></i><span>Web Portfolio</span></div>
-            <div class="project-overlay"><div class="overlay-links"><a href="#" class="overlay-btn"><i class="fab fa-github"></i></a><a href="#" class="overlay-btn"><i class="fas fa-external-link-alt"></i></a></div></div>
+            <div class="project-overlay"><div class="overlay-links"><a href="https://github.com/sarvadevarammohan-commits" target="_blank" class="overlay-btn" title="GitHub"><i class="fab fa-github"></i></a><a href="#home" class="overlay-btn" title="View Live"><i class="fas fa-external-link-alt"></i></a></div></div>
           </div>
           <div class="project-content">
             <div class="project-featured">Featured Project</div>
@@ -187,19 +203,19 @@
     <div class="container">
       <h2 class="section-title reveal"><span class="title-number">05.</span> Achievements</h2>
       <div class="achievements-grid">
-        <div class="achievement-card reveal">
+        <div class="achievement-card reveal" data-tilt>
           <div class="achievement-icon"><i class="fas fa-certificate"></i></div>
           <h3>Certifications</h3>
           <p>Continuously learning and earning certifications in Python, AI, Machine Learning, and Data Science from leading platforms.</p>
           <div class="achievement-decoration"></div>
         </div>
-        <div class="achievement-card reveal">
+        <div class="achievement-card reveal" data-tilt>
           <div class="achievement-icon"><i class="fas fa-trophy"></i></div>
           <h3>Hackathons</h3>
           <p>Participated in hackathons and coding competitions, collaborating with teams to solve real-world challenges under time constraints.</p>
           <div class="achievement-decoration"></div>
         </div>
-        <div class="achievement-card reveal">
+        <div class="achievement-card reveal" data-tilt>
           <div class="achievement-icon"><i class="fas fa-award"></i></div>
           <h3>Technical Achievements</h3>
           <p>Building AI-powered projects, contributing to open source, and constantly expanding skills in emerging technologies.</p>
@@ -220,11 +236,11 @@
           <div class="contact-details">
             <div class="contact-item"><div class="contact-icon"><i class="fas fa-envelope"></i></div><div><h4>Email</h4><a href="mailto:sarvadevarammohan@gmail.com">sarvadevarammohan@gmail.com</a></div></div>
             <div class="contact-item"><div class="contact-icon"><i class="fab fa-github"></i></div><div><h4>GitHub</h4><a href="https://github.com/sarvadevarammohan-commits" target="_blank">github.com/sarvadevarammohan-commits</a></div></div>
-            <div class="contact-item"><div class="contact-icon"><i class="fab fa-linkedin-in"></i></div><div><h4>LinkedIn</h4><a href="https://linkedin.com/in/pradyumna-rammohan" target="_blank">linkedin.com/in/pradyumna-rammohan</a></div></div>
+            <div class="contact-item"><div class="contact-icon"><i class="fab fa-linkedin-in"></i></div><div><h4>LinkedIn</h4><a href="https://www.linkedin.com/in/pradyumna-rammohan-16475b32a/" target="_blank">linkedin.com/in/pradyumna-rammohan</a></div></div>
           </div>
           <div class="social-links">
             <a href="https://github.com/sarvadevarammohan-commits" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com/in/pradyumna-rammohan" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.linkedin.com/in/pradyumna-rammohan-16475b32a/" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
             <a href="mailto:sarvadevarammohan@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
             <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
           </div>
@@ -234,7 +250,7 @@
             <div class="form-group"><input type="text" id="name" name="name" required placeholder=" "><label for="name">Your Name</label><span class="form-line"></span></div>
             <div class="form-group"><input type="email" id="email" name="email" required placeholder=" "><label for="email">Your Email</label><span class="form-line"></span></div>
             <div class="form-group"><textarea id="message" name="message" rows="5" required placeholder=" "></textarea><label for="message">Your Message</label><span class="form-line"></span></div>
-            <button type="submit" class="btn btn-primary btn-submit"><i class="fas fa-paper-plane"></i> Send Message</button>
+            <button type="submit" class="btn btn-primary btn-submit magnetic"><i class="fas fa-paper-plane"></i> Send Message</button>
           </form>
         </div>
       </div>
@@ -249,13 +265,19 @@
         <p class="footer-text">Built with passion and a lot of ☕</p>
         <div class="footer-socials">
           <a href="https://github.com/sarvadevarammohan-commits" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="https://linkedin.com/in/pradyumna-rammohan" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.linkedin.com/in/pradyumna-rammohan-16475b32a/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
           <a href="mailto:sarvadevarammohan@gmail.com"><i class="fas fa-envelope"></i></a>
         </div>
         <p class="footer-copyright">&copy; 2025 RAM. All rights reserved.</p>
       </div>
     </div>
   </footer>
+
+  <!-- FLOATING PROJECT RIBBON -->
+  <a href="https://studyflow-reserve.lovable.app" target="_blank" class="floating-ribbon" id="floatingRibbon">
+    <i class="fas fa-book-reader"></i>
+    <span>Smart Library — Live Demo</span>
+  </a>
 
   <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
   <script src="script.js"></script>
