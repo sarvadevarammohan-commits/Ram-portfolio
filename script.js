@@ -382,7 +382,7 @@ try {
   });
 
   // ========== PARALLAX ON SCROLL ==========
-  const parallaxElements = document.querySelectorAll('.hero-content, .image-wrapper');
+  const parallaxElements = document.querySelectorAll('.hero-content');
 
   function handleParallax() {
     const scrollY = window.scrollY;
@@ -581,7 +581,7 @@ try {
 
   // ========== CONSOLE GREETING ==========
   console.log(
-    '%c⚡ RAM Portfolio %c Built with passion & JavaScript ',
+    '%c⚡ PR Portfolio %c Built with passion & JavaScript ',
     'background: linear-gradient(135deg, #4f8fff, #8b5cf6); color: white; font-size: 16px; padding: 8px 16px; border-radius: 8px 0 0 8px; font-weight: bold;',
     'background: #0a0a1a; color: #8b5cf6; font-size: 14px; padding: 8px 16px; border-radius: 0 8px 8px 0;'
   );

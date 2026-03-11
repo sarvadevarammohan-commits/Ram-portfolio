@@ -148,9 +148,9 @@ This project is open source and available under the [MIT License](LICENSE).
 
 **RAM** — BTech CSE (AI & Data Science) Student
 
-- 🌐 Portfolio: [Live Site](https://69b1d739426f7f04f8a7eaaf--relaxed-sprinkles-b76697.netlify.app/)
-- 💻 GitHub: [github.com/yourusername](https://github.com/sarvadevarammohan-commits)
-- 💼 LinkedIn: [linkedin.com/in/yourprofile](https://www.linkedin.com/in/pradyumna-rammohan-16475b32a/)
+- 🌐 Portfolio: [Live Site](#)
+- 💻 GitHub: [github.com/yourusername](https://github.com/yourusername)
+- 💼 LinkedIn: [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)
 
 ---
 
