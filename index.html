@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="RAM - BTech CSE (AI & Data Science) Student Portfolio. Python Developer & Future AI Engineer.">
+  <meta name="keywords" content="RAM, Portfolio, AI, Data Science, Python Developer, BTech">
+  <meta name="author" content="RAM">
+  <title>RAM | AI & Data Science Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo"><span class="logo-bracket">&lt;</span>RAM<span class="logo-bracket"> /&gt;</span></a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#achievements" class="nav-link">Achievements</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-badge reveal"><i class="fas fa-robot"></i> AI & Data Science Enthusiast</div>
+      <h1 class="hero-title reveal">Hi, I'm <span class="gradient-text">RAM</span></h1>
+      <p class="hero-tagline reveal"><span class="typewriter" id="typewriter"></span><span class="cursor-blink">|</span></p>
+      <p class="hero-description reveal">I am a second-year BTech student specializing in Artificial Intelligence and Data Science. I am passionate about building intelligent systems, solving real-world problems using technology, and continuously improving my programming and analytical skills.</p>
+      <div class="hero-buttons reveal">
+        <a href="#projects" class="btn btn-primary"><i class="fas fa-rocket"></i> View Projects</a>
+        <a href="#" class="btn btn-secondary"><i class="fas fa-download"></i> Download Resume</a>
+        <a href="https://github.com/sarvadevarammohan-commits" target="_blank" class="btn btn-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/pradyumna-rammohan" target="_blank" class="btn btn-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <div class="hero-stats reveal">
+        <div class="stat-item"><span class="stat-number" data-count="2">0</span>+<span class="stat-label">Projects</span></div>
+        <div class="stat-item"><span class="stat-number" data-count="4">0</span>+<span class="stat-label">Languages</span></div>
+        <div class="stat-item"><span class="stat-number" data-count="2">0</span>+<span class="stat-label">Technologies</span></div>
+      </div>
+    </div>
+    <div class="scroll-indicator"><div class="mouse"><div class="wheel"></div></div><span>Scroll Down</span></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section-title reveal"><span class="title-number">01.</span> About Me</h2>
+      <div class="about-grid">
+        <div class="about-image reveal">
+          <div class="image-wrapper">
+            <div class="image-placeholder"><i class="fas fa-user-astronaut"></i></div>
+            <div class="image-border"></div>
+          </div>
+          <div class="about-quick-info">
+            <div class="info-item"><i class="fas fa-graduation-cap"></i><span>BTech CSE (AI & DS)</span></div>
+            <div class="info-item"><i class="fas fa-map-marker-alt"></i><span>India</span></div>
+            <div class="info-item"><i class="fas fa-code"></i><span>Python Developer</span></div>
+          </div>
+        </div>
+        <div class="about-text reveal">
+          <h3>Building the Future with AI</h3>
+          <p>I am currently pursuing my BTech in Computer Science with a specialization in <span class="highlight">Artificial Intelligence and Data Science</span>. I enjoy learning new technologies and building practical projects that strengthen my programming and problem-solving skills.</p>
+          <p>My goal is to become an <span class="highlight">AI engineer</span> capable of building intelligent applications that help solve real-world problems. I'm constantly exploring cutting-edge technologies and working on projects that push the boundaries of what's possible with AI.</p>
+          <div class="about-interests">
+            <h4>What I'm into:</h4>
+            <div class="interest-tags">
+              <span class="tag"><i class="fas fa-brain"></i> Machine Learning</span>
+              <span class="tag"><i class="fas fa-eye"></i> Computer Vision</span>
+              <span class="tag"><i class="fas fa-database"></i> Data Science</span>
+              <span class="tag"><i class="fas fa-code"></i> Web Development</span>
+              <span class="tag"><i class="fas fa-terminal"></i> Problem Solving</span>
+              <span class="tag"><i class="fas fa-microchip"></i> Deep Learning</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section" id="skills">
+    <div class="container">
+      <h2 class="section-title reveal"><span class="title-number">02.</span> Skills & Technologies</h2>
+      <div class="skills-grid">
+        <div class="skill-category reveal">
+          <div class="category-header"><div class="category-icon"><i class="fas fa-code"></i></div><h3>Programming Languages</h3></div>
+          <div class="skill-bars">
+            <div class="skill-bar-item"><div class="skill-info"><span class="skill-name">C</span><span class="skill-percent">85%</span></div><div class="skill-bar"><div class="skill-fill" style="--skill-width:85%"></div></div></div>
+            <div class="skill-bar-item"><div class="skill-info"><span class="skill-name">C++</span><span class="skill-percent">80%</span></div><div class="skill-bar"><div class="skill-fill" style="--skill-width:80%"></div></div></div>
+            <div class="skill-bar-item"><div class="skill-info"><span class="skill-name">Python</span><span class="skill-percent">90%</span></div><div class="skill-bar"><div class="skill-fill" style="--skill-width:90%"></div></div></div>
+            <div class="skill-bar-item"><div class="skill-info"><span class="skill-name">Java</span><span class="skill-percent">75%</span></div><div class="skill-bar"><div class="skill-fill" style="--skill-width:75%"></div></div></div>
+          </div>
+        </div>
+        <div class="skill-category reveal">
+          <div class="category-header"><div class="category-icon"><i class="fas fa-laptop-code"></i></div><h3>Technologies</h3></div>
+          <div class="tech-grid">
+            <div class="tech-card"><i class="fab fa-html5"></i><span>HTML</span></div>
+            <div class="tech-card"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
+            <div class="tech-card"><i class="fab fa-js-square"></i><span>JavaScript</span></div>
+            <div class="tech-card"><i class="fab fa-git-alt"></i><span>Git</span></div>
+            <div class="tech-card"><i class="fab fa-github"></i><span>GitHub</span></div>
+          </div>
+        </div>
+        <div class="skill-category reveal">
+          <div class="category-header"><div class="category-icon"><i class="fas fa-brain"></i></div><h3>Core Concepts</h3></div>
+          <div class="concept-cards">
+            <div class="concept-card"><div class="concept-icon"><i class="fas fa-project-diagram"></i></div><h4>Data Structures</h4><p>Arrays, Linked Lists, Trees, Graphs, Stacks, Queues</p></div>
+            <div class="concept-card"><div class="concept-icon"><i class="fas fa-cogs"></i></div><h4>Algorithms</h4><p>Sorting, Searching, Dynamic Programming, Greedy</p></div>
+            <div class="concept-card"><div class="concept-icon"><i class="fas fa-database"></i></div><h4>DBMS</h4><p>SQL, Normalization, ER Diagrams, Query Optimization</p></div>
+            <div class="concept-card"><div class="concept-icon"><i class="fas fa-robot"></i></div><h4>AI Basics</h4><p>Machine Learning, Neural Networks, Computer Vision</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="container">
+      <h2 class="section-title reveal"><span class="title-number">03.</span> Featured Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card reveal">
+          <div class="project-image">
+            <div class="project-image-placeholder"><i class="fas fa-video"></i><span>AI Vision System</span></div>
+            <div class="project-overlay"><div class="overlay-links"><a href="#" class="overlay-btn"><i class="fab fa-github"></i></a><a href="#" class="overlay-btn"><i class="fas fa-external-link-alt"></i></a></div></div>
+          </div>
+          <div class="project-content">
+            <div class="project-featured">Featured Project</div>
+            <h3 class="project-title">AI Library Seat Monitoring System</h3>
+            <p class="project-description">An intelligent library seat monitoring system that started as a digital seat booking platform and is being enhanced with AI and Computer Vision. The system analyzes real-time CCTV footage to automatically detect seat occupancy, eliminating manual booking updates and providing live seat availability on a digital layout.</p>
+            <div class="project-tech"><span>Python</span><span>OpenCV</span><span>HTML/CSS</span><span>JavaScript</span><span>AI / CV</span></div>
+          </div>
+        </div>
+        <div class="project-card reveal">
+          <div class="project-image">
+            <div class="project-image-placeholder"><i class="fas fa-laptop-code"></i><span>Web Portfolio</span></div>
+            <div class="project-overlay"><div class="overlay-links"><a href="#" class="overlay-btn"><i class="fab fa-github"></i></a><a href="#" class="overlay-btn"><i class="fas fa-external-link-alt"></i></a></div></div>
+          </div>
+          <div class="project-content">
+            <div class="project-featured">Featured Project</div>
+            <h3 class="project-title">Student Portfolio Website</h3>
+            <p class="project-description">A responsive, modern personal portfolio website designed to showcase skills, academic background, and projects. Built with clean code, smooth animations, glassmorphism design, and a dark gradient theme for a premium developer experience.</p>
+            <div class="project-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="section" id="education">
+    <div class="container">
+      <h2 class="section-title reveal"><span class="title-number">04.</span> Education</h2>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"><i class="fas fa-graduation-cap"></i></div>
+          <div class="timeline-content">
+            <div class="timeline-badge">2024 – Present</div>
+            <h3>BTech – Computer Science & Engineering</h3>
+            <h4>Specialization: Artificial Intelligence & Data Science</h4>
+            <p>Currently pursuing a Bachelor of Technology in Computer Science with a focus on AI and Data Science. Studying core subjects including Data Structures, Algorithms, DBMS, Machine Learning fundamentals, and more.</p>
+            <div class="timeline-tags"><span>AI & Data Science</span><span>Data Structures</span><span>Machine Learning</span><span>DBMS</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section class="section" id="achievements">
+    <div class="container">
+      <h2 class="section-title reveal"><span class="title-number">05.</span> Achievements</h2>
+      <div class="achievements-grid">
+        <div class="achievement-card reveal">
+          <div class="achievement-icon"><i class="fas fa-certificate"></i></div>
+          <h3>Certifications</h3>
+          <p>Continuously learning and earning certifications in Python, AI, Machine Learning, and Data Science from leading platforms.</p>
+          <div class="achievement-decoration"></div>
+        </div>
+        <div class="achievement-card reveal">
+          <div class="achievement-icon"><i class="fas fa-trophy"></i></div>
+          <h3>Hackathons</h3>
+          <p>Participated in hackathons and coding competitions, collaborating with teams to solve real-world challenges under time constraints.</p>
+          <div class="achievement-decoration"></div>
+        </div>
+        <div class="achievement-card reveal">
+          <div class="achievement-icon"><i class="fas fa-award"></i></div>
+          <h3>Technical Achievements</h3>
+          <p>Building AI-powered projects, contributing to open source, and constantly expanding skills in emerging technologies.</p>
+          <div class="achievement-decoration"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="container">
+      <h2 class="section-title reveal"><span class="title-number">06.</span> Get In Touch</h2>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <h3>Let's Connect</h3>
+          <p>I'm always open to discussing new projects, creative ideas, or opportunities. Whether you have a question or just want to say hi, feel free to reach out!</p>
+          <div class="contact-details">
+            <div class="contact-item"><div class="contact-icon"><i class="fas fa-envelope"></i></div><div><h4>Email</h4><a href="mailto:sarvadevarammohan@gmail.com">sarvadevarammohan@gmail.com</a></div></div>
+            <div class="contact-item"><div class="contact-icon"><i class="fab fa-github"></i></div><div><h4>GitHub</h4><a href="https://github.com/sarvadevarammohan-commits" target="_blank">github.com/sarvadevarammohan-commits</a></div></div>
+            <div class="contact-item"><div class="contact-icon"><i class="fab fa-linkedin-in"></i></div><div><h4>LinkedIn</h4><a href="https://linkedin.com/in/pradyumna-rammohan" target="_blank">linkedin.com/in/pradyumna-rammohan</a></div></div>
+          </div>
+          <div class="social-links">
+            <a href="https://github.com/sarvadevarammohan-commits" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/pradyumna-rammohan" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:sarvadevarammohan@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="contact-form-wrapper reveal">
+          <form class="contact-form" id="contactForm">
+            <div class="form-group"><input type="text" id="name" name="name" required placeholder=" "><label for="name">Your Name</label><span class="form-line"></span></div>
+            <div class="form-group"><input type="email" id="email" name="email" required placeholder=" "><label for="email">Your Email</label><span class="form-line"></span></div>
+            <div class="form-group"><textarea id="message" name="message" rows="5" required placeholder=" "></textarea><label for="message">Your Message</label><span class="form-line"></span></div>
+            <button type="submit" class="btn btn-primary btn-submit"><i class="fas fa-paper-plane"></i> Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo"><span class="logo-bracket">&lt;</span>RAM<span class="logo-bracket"> /&gt;</span></div>
+        <p class="footer-text">Built with passion and a lot of ☕</p>
+        <div class="footer-socials">
+          <a href="https://github.com/sarvadevarammohan-commits" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/pradyumna-rammohan" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:sarvadevarammohan@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p class="footer-copyright">&copy; 2025 RAM. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+  <script src="script.js"></script>
+</body>
+</html>
